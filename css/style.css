@@ -1,32 +1,39 @@
 :root {
-  --bg: #f4f1ec;
+  --bg: #fdf4f6;
   --card: #ffffff;
-  --text: #2b2f33;
-  --muted: #6b7178;
-  --line: #e4ded5;
-  --accent: #5b8c85;
-  --accent-soft: #dcebe8;
-  --warm: #c98a6b;
-  --warm-soft: #f6e4da;
-  --danger: #b5544b;
-  --radius: 18px;
+  --text: #3b2c33;
+  --muted: #8a7680;
+  --line: #f2dde4;
+  --accent: #c25a82;
+  --accent-soft: #fbe4ed;
+  --warm: #d9776a;
+  --warm-soft: #fde7e2;
+  --danger: #b5444b;
+  --cat: #c9b8bf;
+  --cat-line: #6b5560;
+  --cat-inner: #f4a9c2;
+  --radius: 20px;
   --tabbar-h: 64px;
   color-scheme: light dark;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #1b1f24;
-    --card: #252a31;
-    --text: #e9e6e1;
-    --muted: #a0a6ad;
-    --line: #353b43;
-    --accent: #7fb3ab;
-    --accent-soft: #2d3f3d;
-    --warm: #e0a487;
-    --warm-soft: #3e3029;
-    --danger: #e0786e;
+    --bg: #221a1e;
+    --card: #30252b;
+    --text: #f6e9ee;
+    --muted: #b49ea8;
+    --line: #45363d;
+    --accent: #f08fb4;
+    --accent-soft: #4a2c3a;
+    --warm: #f0a094;
+    --warm-soft: #4a302b;
+    --danger: #f0807a;
+    --cat: #8f7c85;
+    --cat-line: #f6e9ee;
+    --cat-inner: #e78fae;
   }
+  .btn:not(.ghost):not(.soft):not(.danger), .chip.on, .sos-link { color: #2a1820; }
 }
 
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
@@ -224,3 +231,51 @@ details summary::-webkit-details-marker { display: none; }
 .phone b { color: var(--accent); }
 
 .chart { width: 100%; height: auto; display: block; }
+
+/* ---------- Gatto ---------- */
+.cat { display: block; }
+.cat-row { display: flex; align-items: flex-end; gap: 10px; margin: 14px 0 4px; }
+.cat-row .cat { width: 84px; flex: none; cursor: pointer; transform-origin: 50% 90%; }
+.cat-row .cat.purr { animation: purr .45s ease-in-out 3; }
+@keyframes purr { 0%,100% { transform: rotate(0) } 25% { transform: rotate(-5deg) } 75% { transform: rotate(5deg) } }
+.bubble {
+  position: relative; flex: 1;
+  background: var(--card); border-radius: 18px 18px 18px 4px;
+  padding: 12px 14px; font-size: 16px; line-height: 1.4;
+  box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.bubble small { display: block; color: var(--muted); font-size: 12px; margin-top: 4px; }
+.purr-text { font-size: 13px; color: var(--accent); text-align: center; height: 18px; width: 84px; }
+
+.breath-stage { flex-direction: column; height: auto; padding: 20px 0 10px; }
+.breath-circle { position: relative; display: flex; align-items: center; justify-content: center; }
+.breath-circle .cat { width: 52%; }
+.breath-text { text-align: center; margin-top: 4px; min-height: 92px; }
+.breath-text .phase { font-size: 24px; font-weight: 700; }
+.breath-text .count { font-size: 40px; font-weight: 300; font-variant-numeric: tabular-nums; line-height: 1.1; }
+
+.tile.full { grid-column: 1 / -1; min-height: auto; flex-direction: row; align-items: center; gap: 14px; }
+.tile.full > div { display: flex; flex-direction: column; }
+
+.pct { font-size: 34px; font-weight: 700; color: var(--accent); }
+.stat-row { display: flex; gap: 10px; text-align: center; margin: 10px 0; }
+.stat-row > div { flex: 1; background: var(--bg); border-radius: 14px; padding: 10px 4px; }
+.stat-row b { display: block; font-size: 24px; }
+.stat-row span { font-size: 12px; color: var(--muted); }
+
+.hbar { display: flex; align-items: center; gap: 8px; margin: 6px 0; font-size: 14px; }
+.hbar span:first-child { width: 120px; flex: none; }
+.hbar i { display: block; height: 10px; border-radius: 5px; background: var(--accent); }
+
+.btn.sm { min-height: 38px; padding: 6px 12px; font-size: 14px; }
+.quote { font-style: italic; border-left: 3px solid var(--accent); padding-left: 12px; margin: 8px 0; }
+.tip { background: var(--accent-soft); border-radius: 14px; padding: 12px 14px; font-size: 15px; margin: 12px 0; }
+.check { display: flex; gap: 10px; align-items: flex-start; }
+.check input { width: 22px; height: 22px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.check.done span { text-decoration: line-through; color: var(--muted); }
+.good { font-size: 12px; font-weight: 700; color: #fff; background: var(--accent); border-radius: 999px; padding: 2px 8px; margin-left: 6px; white-space: nowrap; }
+.tile.full .cat, .tile.full .ico svg { width: 56px; flex: none; }
+.breath-stage { padding: 4px 0 0; }
+.breath-circle { width: 230px; height: 230px; }
+.breath-text { min-height: 76px; }
+.breath-text .count { font-size: 34px; }

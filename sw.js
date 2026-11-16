@@ -1,6 +1,6 @@
 // Service worker: rende l'app utilizzabile offline.
 // Cambia CACHE quando modifichi i file, così l'iPhone scarica la nuova versione.
-const CACHE = 'respiro-v1';
+const CACHE = 'fusa-v2';
 const ASSETS = [
   './',
   './index.html',

@@ -1,6 +1,6 @@
-# Respiro
+# Fusa
 
-Una piccola app per iPhone che aiuta a gestire l'ansia nei momenti difficili e a conoscerla meglio nel tempo.
+Una piccola app per iPhone, con un gatto come compagno, per gestire l'ansia: soprattutto **pensieri a ciclo** e **paranoie** su lavoro, studio e giudizio degli altri. Tono dolce, con un po' di ironia.
 
 È una **web app installabile** (PWA): si aggiunge alla schermata Home come una normale app, funziona **offline** e **tutti i dati restano sul telefono**. Niente account, niente server, niente App Store.
 
@@ -8,14 +8,18 @@ Una piccola app per iPhone che aiuta a gestire l'ansia nei momenti difficili e a
 
 | Sezione | A cosa serve |
 |---|---|
-| **Respira** | 4 esercizi guidati con un cerchio animato: respiro quadrato, 4-7-8, respiro coerente, sospiro fisiologico |
-| **Torna al presente** | Tecnica di grounding 5-4-3-2-1, un passo alla volta |
-| **Diario** | Check-in rapido: livello d'ansia 0–10, emozioni, sensazioni nel corpo, cosa è successo. Grafico degli ultimi 14 giorni |
-| **Pensieri** | Diario cognitivo (tecnica della terapia cognitivo-comportamentale): si scrive un pensiero ansioso, si riconoscono le "trappole" e si cerca una lettura più equilibrata, misurando l'ansia prima e dopo |
-| **SOS** | Schermata calma per i momenti peggiori: passi semplici, frasi personali, contatti di fiducia da chiamare con un tocco, numeri di emergenza e di ascolto |
-| **Altro** | Nome, contatti, frasi personali, backup ed eliminazione dei dati |
+| **Pensiero in loop** | Quando la testa gira in tondo: si scrive il pensiero e si capisce se c'è qualcosa di concreto da fare (→ un "piccolo passo" da spuntare) o se va lasciato andare (→ scatola, analisi, distrazione, respiro) |
+| **Cosa penseranno di me?** | Per le paranoie sugli altri: "lo so o lo suppongo?", tre spiegazioni alternative, "tra un anno conterà?", l'effetto riflettore |
+| **Scatola delle paranoie** | Si scrive cosa si teme e quanto se ne è sicure; dopo si segna com'è andata. L'app mostra quante paure non si sono avverate |
+| **Pausa dal cervello** | Attività da provare: si segna cosa ha aiutato e l'app mette in cima quello che funziona per lei |
+| **Respira** | 4 esercizi guidati con un gatto che si gonfia e sgonfia |
+| **Torna al presente** | Grounding 5-4-3-2-1 |
+| **Diario** | Check-in con livello d'ansia, argomento (lavoro/studio/giudizio), emozioni e corpo; grafico di 14 giorni e "cosa ti agita di più" |
+| **Esamina un pensiero** | Diario cognitivo con le trappole mentali più comuni |
+| **SOS** | Schermata calma per i momenti peggiori, contatti di fiducia, numeri utili |
+| **Altro** | Nome, nome del gatto, contatti, frasi personali, backup |
 
-Se un check-in registra un'ansia di 7 o più, l'app apre da sola la schermata SOS.
+Se un check-in registra ansia ≥ 7 si apre l'SOS; se segna "In loop" o "Paranoica" si apre lo strumento per i pensieri in loop.
 
 > ⚠️ L'app è un supporto, non sostituisce un medico o uno psicologo.
 
@@ -26,7 +30,7 @@ L'iPhone installa le web app solo da un indirizzo **https**. Il modo più sempli
 1. Unisci questo branch su `main`.
 2. Su GitHub: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
    (Con un account GitHub gratuito, Pages funziona solo se il repository è **pubblico**. Il codice non contiene dati personali: quelli restano sul telefono.)
-3. Al primo push su `main` il workflow `.github/workflows/pages.yml` pubblica l'app su `https://<utente>.github.io/progetto-app/`.
+3. Al primo push su `main` il workflow `.github/workflows/pages.yml` pubblica l'app su `https://abusivo00.github.io/progetto-app/`.
 4. Sull'iPhone apri quell'indirizzo con **Safari** → tasto **Condividi** → **Aggiungi alla schermata Home**.
 5. Apri l'app dall'icona: da quel momento funziona anche senza connessione.
 
@@ -46,7 +50,7 @@ python3 -m http.server 8000
 
 ## Aggiornare l'app
 
-Dopo aver modificato i file, cambia il nome della cache in `sw.js` (es. `respiro-v1` → `respiro-v2`) e pubblica. Alla successiva apertura con la connessione attiva l'iPhone scarica la nuova versione (a volte serve chiudere e riaprire l'app).
+Dopo aver modificato i file, cambia il nome della cache in `sw.js` (es. `fusa-v2` → `fusa-v3`) e pubblica. Alla successiva apertura con la connessione attiva l'iPhone scarica la nuova versione (a volte serve chiudere e riaprire l'app).
 
 ## Struttura
 

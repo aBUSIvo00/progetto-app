@@ -1,13 +1,13 @@
 {
-  "name": "Respiro",
-  "short_name": "Respiro",
-  "description": "Un piccolo spazio per gestire l'ansia: respirazione, grounding, diario e pensieri.",
+  "name": "Fusa",
+  "short_name": "Fusa",
+  "description": "Un piccolo spazio con un gatto per gestire ansia, pensieri in loop e paranoie.",
   "lang": "it",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f4f1ec",
-  "theme_color": "#f4f1ec",
+  "background_color": "#fdf4f6",
+  "theme_color": "#fdf4f6",
   "icons": [
     { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
     { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
